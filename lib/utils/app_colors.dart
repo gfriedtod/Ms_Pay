@@ -9,4 +9,5 @@ class AppColors{
   static const texColors = Colors.black;
 
   static const secondary =Colors.white;
+  static const green = Color(0xff04A946);
 }

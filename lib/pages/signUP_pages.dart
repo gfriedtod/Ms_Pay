@@ -63,7 +63,7 @@ class SignUpPage extends StatelessWidget {
                         onPressed: (){}, child: Text(' M’e connecter' , style: GoogleFonts.itim(
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
-                      color: AppColors.primary
+                      color: AppColors.green
                     ),))
                   ],
                 ),
