@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled4/pages/signUP_pages.dart';
 import 'package:untitled4/pages/welcome_pages.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const WelComePage(),
+      home:  SignUpPage(),
     );
   }
 }
