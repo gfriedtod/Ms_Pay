@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled4/pages/history_detail_page.dart';
 import 'package:untitled4/pages/home_pages.dart';
+import 'package:untitled4/pages/local_money_transfert.dart';
 import 'package:untitled4/pages/login_page.dart';
 import 'package:untitled4/pages/pay_scool_fees.dart';
 import 'package:untitled4/pages/setting_page.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  PaySchoolFeesPages(),
+      home:  LocalMoneyTransfertPage(),
     );
   }
 }

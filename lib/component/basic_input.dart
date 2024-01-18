@@ -6,7 +6,8 @@ class BasicInput extends StatelessWidget {
   final String hintText;
   final TextInputType? textInputType;
   final TextEditingController? controller = TextEditingController();
-   BasicInput({super.key, required this.label, required this.hintText, this.textInputType ,controller});
+  final String? prefix;
+   BasicInput({super.key, required this.label, required this.hintText, this.textInputType ,controller, this.prefix});
 
 
   @override
@@ -19,7 +20,9 @@ class BasicInput extends StatelessWidget {
           controller: controller,
           keyboardType: textInputType ?? TextInputType.text,
           decoration: InputDecoration(
+            prefix: prefix != null ? Text(prefix! , style: GoogleFonts.itim(color: Colors.black, fontSize: 18,) ): null,
               border: OutlineInputBorder(
+
                 borderSide: const BorderSide(color: Colors.black),
                 borderRadius: BorderRadius.circular(12),
               ),
