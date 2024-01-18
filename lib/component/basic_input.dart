@@ -5,7 +5,9 @@ class BasicInput extends StatelessWidget {
   final String label;
   final String hintText;
   final TextInputType? textInputType;
-  const BasicInput({super.key, required this.label, required this.hintText, this.textInputType});
+  final TextAlign? textAlign;
+  final String? suffix;
+  const BasicInput({super.key, required this.label, required this.hintText, this.textInputType, this.textAlign, this.suffix});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +16,7 @@ class BasicInput extends StatelessWidget {
       children: [
         Text(label, style: GoogleFonts.itim(color: Colors.black, fontSize: 18),),
         TextFormField(
+          textAlign: textAlign ?? TextAlign.right,
           keyboardType: textInputType ?? TextInputType.text,
           decoration: InputDecoration(
               border: OutlineInputBorder(
@@ -21,7 +24,9 @@ class BasicInput extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
               hintText: hintText,
-              hintStyle: GoogleFonts.itim(color: Colors.black, fontSize: 18)
+              hintStyle: GoogleFonts.itim(color: Colors.black, fontSize: 18),
+            suffixText: suffix,
+            suffixStyle: GoogleFonts.itim(color: Colors.black, fontSize: 17)
           ),
         )
       ],
