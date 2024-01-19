@@ -66,7 +66,7 @@ class ExtraPayementPage extends StatelessWidget {
                         ),
                         SizedBox(
                           height: height/2,
-                          child: const Column(
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               BasicInput(label: "Entrez le numéro de compte qui envoie", hintText: "+237 6 -- -- -- --", textInputType: TextInputType.number, textAlign: TextAlign.start,),

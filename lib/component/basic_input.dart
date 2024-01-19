@@ -9,7 +9,7 @@ class BasicInput extends StatelessWidget {
   final String? suffix;
   final TextEditingController? controller = TextEditingController();
   final String? prefix;
-  BasicInput({super.key, required this.label, required this.hintText, this.textInputType, this.textAlign, this.suffix, this.prefix, this.controller});
+  BasicInput({super.key, required this.label, required this.hintText, this.textInputType, this.textAlign, this.suffix, this.prefix});
 
 
 

@@ -37,18 +37,18 @@ class InfraPayementPage extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            const BasicInput(label: "Code de l’établissement", hintText: "XHMLFF"),
+                            BasicInput(label: "Code de l’établissement", hintText: "XHMLFF"),
                             Text("Lycée bilingue de Bonaberi", style: GoogleFonts.itim(color: AppColors.green, fontSize: 17),)
                           ],
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            const BasicInput(label: "Matricule de l’élève", hintText: "M-GHTL2024"),
+                            BasicInput(label: "Matricule de l’élève", hintText: "M-GHTL2024"),
                             Text("TCHOUNGA Jordan  - Tle C1", style: GoogleFonts.itim(color: AppColors.green, fontSize: 17),)
                           ],
                         ),
-                        const BasicInput(label: "Montant :", hintText: "35 000", textInputType: TextInputType.number, suffix: "FCFA",),
+                        BasicInput(label: "Montant :", hintText: "35 000", textInputType: TextInputType.number, suffix: "FCFA",),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -84,7 +84,7 @@ class InfraPayementPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const BasicInput(label: "Numéro de compte", hintText: "+237 693667901", textInputType: TextInputType.number, textAlign: TextAlign.start,),
+                        BasicInput(label: "Numéro de compte", hintText: "+237 693667901", textInputType: TextInputType.number, textAlign: TextAlign.start,),
                         SizedBox(
                           width: width,
                           height: height/12,
