@@ -28,7 +28,7 @@ class HistoryDetailPage extends StatelessWidget {
                   height: height/1.3,
                   child:  Container(
                     padding: EdgeInsets.only(left: width/10, right: width/10, top: height/10),
-                    child: const Column(
+                    child:  Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [

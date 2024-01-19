@@ -4,11 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 class PersonalFormField extends StatelessWidget {
   final String value;
 
-  final String icon;
+  String? icon;
 
   TextEditingController controller = TextEditingController();
 
-   PersonalFormField({super.key, required this.value, required this.icon , required this.controller});
+   PersonalFormField({super.key, required this.value,  required this.controller , this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class PersonalFormField extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Image.asset(icon),
+              child:(icon != null)? Image.asset(icon!):Container(),
             ),
             Expanded(
               child: LayoutBuilder(
