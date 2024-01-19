@@ -5,9 +5,13 @@ class BasicInput extends StatelessWidget {
   final String label;
   final String hintText;
   final TextInputType? textInputType;
+  final TextAlign? textAlign;
+  final String? suffix;
   final TextEditingController? controller = TextEditingController();
   final String? prefix;
-   BasicInput({super.key, required this.label, required this.hintText, this.textInputType ,controller, this.prefix});
+  BasicInput({super.key, required this.label, required this.hintText, this.textInputType, this.textAlign, this.suffix, this.prefix});
+
+
 
 
   @override
@@ -17,6 +21,7 @@ class BasicInput extends StatelessWidget {
       children: [
         Text(label, style: GoogleFonts.itim(color: Colors.black, fontSize: 18),),
         TextFormField(
+          textAlign: textAlign ?? TextAlign.right,
           controller: controller,
           keyboardType: textInputType ?? TextInputType.text,
           decoration: InputDecoration(
@@ -27,7 +32,9 @@ class BasicInput extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
               hintText: hintText,
-              hintStyle: GoogleFonts.itim(color: Colors.black, fontSize: 18 ,)
+              hintStyle: GoogleFonts.itim(color: Colors.black, fontSize: 18),
+            suffixText: suffix,
+            suffixStyle: GoogleFonts.itim(color: Colors.black, fontSize: 17)
           ),
         )
       ],
