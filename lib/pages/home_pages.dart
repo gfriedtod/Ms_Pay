@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled4/component/home_menu.dart';
+import 'package:untitled4/pages/extra_payement_page.dart';
+import 'package:untitled4/pages/infra_payement_page.dart';
+import 'package:untitled4/pages/local_money_transfert.dart';
+import 'package:untitled4/pages/pay_scool_fees.dart';
 
 class HommePages extends StatelessWidget {
   const HommePages({super.key});
@@ -32,16 +36,26 @@ class HommePages extends StatelessWidget {
                 SizedBox(height: size.height*0.055,),
                 HomeMenu(
                   value: 'Paiement Scolarité',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => const PaySchoolFeesPages()));
+                  },
                 ),
-                HomeMenu(value: 'Paiement Service courant', onPressed: () {}),
-                HomeMenu(value: 'Paiement Service en ligne', onPressed: () {}),
+                HomeMenu(value: 'Paiement Service courant', onPressed: () {
+                  Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => const InfraPayementPage()));
+                }),
+                HomeMenu(value: 'Paiement Service en ligne', onPressed: () {
+                  Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => const ExtraPayementPage()));
+                }),
                 HomeMenu(
                   value: 'Transfert d’argent local',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => const LocalMoneyTransfertPage()));
+                  },
                 ),
                 HomeMenu(
-                    value: 'Transfert d’argent international', onPressed: () {})
+                    value: 'Transfert d’argent international', onPressed: () {
+                  Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => const ExtraPayementPage()));
+                })
               ],
             ),
           ),

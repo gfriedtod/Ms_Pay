@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled4/component/personal_button.dart';
 import 'package:untitled4/component/personal_form_field.dart';
+import 'package:untitled4/pages/home_pages.dart';
+import 'package:untitled4/pages/login_page.dart';
 import 'package:untitled4/utils/app_colors.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -60,7 +62,9 @@ class SignUpPage extends StatelessWidget {
                           padding: MaterialStateProperty.all(EdgeInsets.zero),
 
                         ),
-                        onPressed: (){}, child: Text(' M’e connecter' , style: GoogleFonts.itim(
+                        onPressed: (){
+                          Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => LoginPage()));
+                        }, child: Text(' M’e connecter' , style: GoogleFonts.itim(
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
                       color: AppColors.green
@@ -71,7 +75,9 @@ class SignUpPage extends StatelessWidget {
                   builder: (context ,constraints) {
                     return SizedBox(
                         width: constraints.maxWidth,
-                        child: PersonalButton(onPressed: (){}, text: 'S’inscrire', state: true));
+                        child: PersonalButton(onPressed: (){
+                          Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => const HommePages()));
+                        }, text: 'S’inscrire', state: true));
                   }
                 )
                

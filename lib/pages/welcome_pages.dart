@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled4/component/personal_button.dart';
+import 'package:untitled4/pages/login_page.dart';
 import 'package:untitled4/utils/app_colors.dart';
 
 class WelComePage extends StatelessWidget {
@@ -47,7 +48,9 @@ class WelComePage extends StatelessWidget {
                 SizedBox(
                     width: width * 0.9,
                     child: PersonalButton(
-                        onPressed: () {}, text: 'Get Started', state: false)),
+                        onPressed: () {
+                          Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => LoginPage()));
+                        }, text: 'Get Started', state: false)),
                 SizedBox(height: 20,),
               ],
             )

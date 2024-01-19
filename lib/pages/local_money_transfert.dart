@@ -15,7 +15,6 @@ class LocalMoneyTransfertPage extends StatelessWidget {
         appBar: AppBar(
       title: Row(
         children: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
           Text('Transfert d’argent local',
               style: GoogleFonts.itim(
                 fontSize: 24,
