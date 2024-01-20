@@ -76,7 +76,7 @@ class SignUpPage extends StatelessWidget {
                     return SizedBox(
                         width: constraints.maxWidth,
                         child: PersonalButton(onPressed: (){
-                          Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => const HommePages()));
+                          Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => const HomePage()));
                         }, text: 'S’inscrire', state: true));
                   }
                 )

@@ -1,10 +1,35 @@
+import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:untitled4/pages/home_pages.dart';
+import 'package:untitled4/pages/transaction_stories_pages.dart';
 import 'package:untitled4/utils/app_colors.dart';
 
-class SettingPage extends StatelessWidget {
-  const SettingPage({super.key});
 
+class SettingPage extends StatefulWidget {
+  const SettingPage({super.key});
+  @override
+  SettingPageState createState() => SettingPageState();
+}
+  class SettingPageState extends State<SettingPage> with TickerProviderStateMixin {
+
+    var _selectedTab = _SelectedTab.settings;
+
+    void _handleIndexChanged(int i) {
+      switch(i) {
+        case 0:
+          Navigator.pushReplacement(context, PageRouteBuilder(pageBuilder: (_,__,___) => const HomePage()));
+        case 1:
+          Navigator.pushReplacement(context, PageRouteBuilder(pageBuilder: (_,__,___) => const TransactionStoriesPages()));
+        case 2:
+          break;
+        default:
+          break;
+      }
+      setState(() {
+        _selectedTab = _SelectedTab.values[i];
+      });
+    }
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -68,6 +93,36 @@ class SettingPage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: SizedBox(
+        height: 130,
+        child: DotNavigationBar(
+          backgroundColor: const Color.fromRGBO(1, 49, 62, 1),
+          currentIndex: _SelectedTab.values.indexOf(_selectedTab),
+          onTap: _handleIndexChanged,
+          items: [
+            /// Home
+            DotNavigationBarItem(
+              icon: const Icon(Icons.home, color: Colors.white,),
+              selectedColor: AppColors.primary,
+            ),
+
+            /// Likes
+            DotNavigationBarItem(
+              icon: const Icon(Icons.access_time_rounded, color: Colors.white),
+              selectedColor: AppColors.primary,
+            ),
+
+            /// Search
+            DotNavigationBarItem(
+              icon: const Icon(Icons.settings_outlined, color: Colors.white),
+              selectedColor: AppColors.primary,
+            ),
+
+          ],),
+      ),
+
     );
   }
 }
+
+enum _SelectedTab { home, history, settings }

@@ -12,9 +12,10 @@ class PaySchoolFeesPages extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+
         title: Row(
           children: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+           // IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
             Text(
               'Paiement scolarité',
               style: GoogleFonts.itim(
