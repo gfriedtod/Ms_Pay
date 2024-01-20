@@ -80,7 +80,7 @@ class LoginPage extends StatelessWidget {
                         return SizedBox(
                             width: constraints.maxWidth,
                             child: PersonalButton(onPressed: (){
-                              Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => HommePages()));
+                              Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___) => const HomePage()));
                             }, text: 'Se connecter', state: true));
                       }
                   )

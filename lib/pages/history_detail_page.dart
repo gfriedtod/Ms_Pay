@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled4/component/basic_input.dart';
 
+
 class HistoryDetailPage extends StatelessWidget {
   const HistoryDetailPage({super.key});
 
@@ -48,3 +49,6 @@ class HistoryDetailPage extends StatelessWidget {
     );
   }
 }
+
+enum _SelectedTab { home, history, settings }
+
